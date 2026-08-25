@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Quiz Azzurrostellato | Malati Della Paganese</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0066b3, #003b70);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      font-size: 30px;
+    }
+
+    header p {
+      margin-top: 8px;
+      opacity: 0.9;
+    }
+
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #003b70;
+      font-weight: bold;
+      padding: 8px 13px;
+      border-radius: 20px;
+    }
+
+    nav a:hover {
+      background: #e7f2fb;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      padding: 35px 20px;
+    }
+
+    .quiz-title {
+      text-align: center;
+      color: #003b70;
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .quiz-box {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .question-number {
+      color: #0072c6;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .question {
+      color: #003b70;
+      font-size: 22px;
+      margin-bottom: 25px;
+    }
+
+    .answers {
+      display: grid;
+      gap: 12px;
+    }
+
+    .answer {
+      padding: 15px;
+      border: 2px solid #dce8f2;
+      border-radius: 12px;
+      background: #f8fbfe;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .answer:hover {
+      background: #e7f2fb;
+      border-color: #0072c6;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 24px;
+      background: #0072c6;
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    footer {
+      background: #002f5f;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 25px;
+      }
+
+      .quiz-title {
+        font-size: 27px;
+      }
+
+      .quiz-box {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>💙⭐ Malati Della Paganese</h1>
+  <p>La voce degli Azzurrostellati</p>
+</header>
+
+<nav>
+  <a href="index.html">🏠 Home</a>
+  <a href="news.html">📰 News</a>
+  <a href="quiz.html">🧠 Quiz</a>
+  <a href="rosa.html">👥 Rosa</a>
+  <a href="campionato.html">🏆 Campionato</a>
+  <a href="stadio.html">🏟️ Stadio</a>
+</nav>
+
+<main class="container">
+
+  <h2 class="quiz-title">🧠 QUIZ AZZURROSTELLATO</h2>
+
+  <p class="intro">
+    Quanto conosci davvero la Paganese?<br>
+    Mettiti alla prova con 10 domande da vero Malato. 💙⭐
+  </p>
+
+  <div class="quiz-box">
+
+    <div class="question-number">
+      DOMANDA 1 DI 10
+    </div>
+
+    <h3 class="question">
+      Qui inseriremo la prima domanda...
+    </h3>
+
+    <div class="answers">
+
+      <button class="answer">A) Risposta</button>
+
+      <button class="answer">B) Risposta</button>
+
+      <button class="answer">C) Risposta</button>
+
+      <button class="answer">D) Risposta</button>
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <strong>💙⭐ Malati Della Paganese</strong>
+
+  <p>La voce degli Azzurrostellati</p>
+
+  <p style="margin-top: 12px; font-size: 13px; opacity: 0.8;">
+    © 2026 Malati Della Paganese
+  </p>
+</footer>
+
+</body>
+</html>
