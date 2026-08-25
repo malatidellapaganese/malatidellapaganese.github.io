@@ -383,9 +383,25 @@
       mostraDomanda();
     } else {
       alert(
-        "🏁 QUIZ TERMINATO!\n\n" +
-        "Hai totalizzato " + punteggio + " punto/i su " + domande.length + "."
-      );
+       let messaggio = "";
+
+if (punteggio === 10) {
+  messaggio = "🔥 SEI UN VERO MALATO DELLA PAGANESE! 💙⭐";
+} else if (punteggio >= 8) {
+  messaggio = "💙⭐ SEI UN GRANDE MALATO!";
+} else if (punteggio >= 6) {
+  messaggio = "😎 SEI SULLA BUONA STRADA!";
+} else if (punteggio >= 4) {
+  messaggio = "👀 DEVI STUDIARE LA STORIA AZZURROSTELLATA!";
+} else {
+  messaggio = "😂 MA SEI DAVVERO UN MALATO DELLA PAGANESE?";
+}
+
+alert(
+  "🏁 QUIZ TERMINATO!\n\n" +
+  messaggio + "\n\n" +
+  "Hai totalizzato " + punteggio + "/10 punti."
+);
     }
 
   }
