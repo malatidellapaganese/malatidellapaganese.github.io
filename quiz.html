@@ -215,6 +215,82 @@
     © 2026 Malati Della Paganese
   </p>
 </footer>
+<script>
 
+  let domanda = 1;
+  let punteggio = 0;
+
+  const domande = [
+    {
+      domanda: "Quale giocatore ha segnato più gol nella storia della Paganese?",
+      risposte: [
+        "Marco Fracas",
+        "Francesco Scarpa",
+        "Peppe Orlando",
+        "Italo Tramontano"
+      ],
+      corretta: 1
+    }
+  ];
+
+  function mostraDomanda() {
+
+    const q = domande[domanda - 1];
+
+    document.querySelector(".question-number").textContent =
+      "DOMANDA " + domanda + " DI 10";
+
+    document.querySelector(".question").textContent =
+      q.domanda;
+
+    const contenitore = document.querySelector(".answers");
+
+    contenitore.innerHTML = "";
+
+    q.risposte.forEach((risposta, indice) => {
+
+      const bottone = document.createElement("button");
+
+      bottone.className = "answer";
+
+      bottone.textContent =
+        String.fromCharCode(65 + indice) + ") " + risposta;
+
+      bottone.onclick = function() {
+        controllaRisposta(indice);
+      };
+
+      contenitore.appendChild(bottone);
+
+    });
+  }
+
+  function controllaRisposta(indice) {
+
+    const q = domande[domanda - 1];
+
+    if (indice === q.corretta) {
+      punteggio++;
+      alert("✅ RISPOSTA ESATTA! 💙⭐");
+    } else {
+      alert("❌ RISPOSTA SBAGLIATA!");
+    }
+
+    domanda++;
+
+    if (domanda <= domande.length) {
+      mostraDomanda();
+    } else {
+      alert(
+        "🏁 QUIZ TERMINATO!\n\n" +
+        "Hai totalizzato " + punteggio + " punto/i su " + domande.length + "."
+      );
+    }
+
+  }
+
+  mostraDomanda();
+
+</script>
 </body>
 </html>
