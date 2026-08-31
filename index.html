@@ -960,6 +960,465 @@
     font-size: 18px;
   }
 }
+  ```css id="6qg2gu"
+/* =========================
+   TABELLINI
+========================= */
+
+.tabellini-section {
+  margin-top: 40px;
+}
+
+.tabellino-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  padding: 22px;
+  margin: 20px auto;
+  max-width: 750px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tabellino-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.tabellino-competizione {
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.tabellino-partita {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.tabellino-squadra {
+  width: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.tabellino-squadra img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.tabellino-risultato {
+  font-size: 28px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.tabellino-data {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 18px;
+  opacity: 0.8;
+}
+
+.tabellino-button {
+  text-align: center;
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+
+/* =========================
+   FINESTRA TABELLINO
+========================= */
+
+.tabellino-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.tabellino-modal-content {
+  position: relative;
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #111111;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.chiudi-tabellino {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #111111;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.tabellino-modal-header {
+  text-align: center;
+  padding: 10px 40px 25px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.tabellino-modal-header div {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.tabellino-modal-header h2 {
+  margin: 12px 0;
+  font-size: 28px;
+}
+
+.tabellino-modal-header p {
+  margin: 0;
+  font-size: 13px;
+  color: #666666;
+}
+
+.tabellino-contenuto {
+  padding-top: 20px;
+}
+
+.tabellino-contenuto h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #dddddd;
+  font-size: 17px;
+}
+
+.tabellino-blocco {
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  min-height: 20px;
+}
+
+/* =========================
+   TABELLINI SU TELEFONO
+========================= */
+
+@media (max-width: 600px) {
+
+  .tabellino-card {
+    padding: 16px;
+  }
+
+  .tabellino-partita {
+    gap: 10px;
+  }
+
+  .tabellino-squadra {
+    width: 105px;
+    font-size: 14px;
+  }
+
+  .tabellino-squadra img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .tabellino-risultato {
+    font-size: 23px;
+    min-width: 55px;
+  }
+
+  .tabellino-modal {
+    padding: 10px;
+  }
+
+  .tabellino-modal-content {
+    margin: 10px auto;
+    padding: 20px 15px;
+  }
+
+  .tabellino-modal-header h2 {
+    font-size: 22px;
+  }
+
+}
+
+/* =========================
+   TABELLINO - RIEPILOGO
+========================= */
+
+.tabellino-riepilogo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.riepilogo-box {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+}
+
+.riepilogo-box span {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.riepilogo-box strong {
+  display: block;
+  font-size: 15px;
+}
+
+/* =========================
+   MARCATORI
+========================= */
+
+.tabellino-marcatori {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.marcatore-paganese,
+.marcatore-palmese {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  background: #f5f5f5;
+}
+
+.marcatore-paganese {
+  border-left: 5px solid #0066cc;
+}
+
+.marcatore-palmese {
+  border-left: 5px solid #777;
+}
+
+.minuto-gol {
+  font-weight: bold;
+  min-width: 35px;
+}
+
+.marcatore-paganese strong,
+.marcatore-palmese strong {
+  flex: 1;
+}
+
+.marcatore-paganese span:last-child,
+.marcatore-palmese span:last-child {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* =========================
+   FORMAZIONI AFFIANCATE
+========================= */
+
+.tabellino-formazioni {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.formazione {
+  background: #f5f5f5;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.formazione-header {
+  padding: 14px;
+  text-align: center;
+  background: #eeeeee;
+}
+
+.formazione-header h4 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.formazione-lista {
+  padding: 10px 14px;
+}
+
+.giocatore-voto,
+.giocatore {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 4px;
+  border-bottom: 1px solid #dddddd;
+  font-size: 14px;
+}
+
+.giocatore-voto strong {
+  min-width: 35px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 7px;
+  padding: 4px 5px;
+}
+
+.giocatore-voto small,
+.giocatore small {
+  color: #777;
+  font-size: 11px;
+}
+
+.formazione-panchina,
+.formazione-allenatore {
+  padding: 12px 14px;
+  border-top: 1px solid #dddddd;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================
+   SOSTITUZIONI
+========================= */
+
+.sostituzioni-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.sostituzioni-squadra {
+  background: #f5f5f5;
+  border-radius: 14px;
+  padding: 15px;
+}
+
+.sostituzioni-squadra h4 {
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.sostituzione {
+  display: grid;
+  grid-template-columns: 40px 1fr 25px 1fr;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 4px;
+  border-bottom: 1px solid #dddddd;
+  font-size: 13px;
+}
+
+.sostituzione-minuto {
+  font-weight: bold;
+}
+
+.freccia {
+  text-align: center;
+  font-size: 18px;
+}
+
+/* =========================
+   PAGELLE
+========================= */
+
+.pagelle-paganese {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+}
+
+.pagella {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 9px;
+  padding: 9px 12px;
+  font-size: 14px;
+}
+
+.pagella strong {
+  min-width: 38px;
+  text-align: center;
+  padding: 4px 6px;
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+/* =========================
+   SEZIONI DEL TABELLINO
+========================= */
+
+.tabellino-contenuto h3 {
+  margin-top: 28px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #dddddd;
+  font-size: 17px;
+}
+
+.tabellino-blocco {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 13px 15px;
+  line-height: 1.7;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .tabellino-riepilogo {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tabellino-formazioni {
+    grid-template-columns: 1fr;
+  }
+
+  .sostituzioni-container {
+    grid-template-columns: 1fr;
+  }
+
+  .pagelle-paganese {
+    grid-template-columns: 1fr;
+  }
+
+  .marcatore-paganese,
+  .marcatore-palmese {
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .sostituzione {
+    grid-template-columns: 35px 1fr 20px 1fr;
+    font-size: 12px;
+  }
+
+} 
   </style>
   <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCE0EHCC5R"></script>
@@ -1163,13 +1622,13 @@
   </article>
 
 </div>
-      
-    <h2 class="section-title">Prossima Partita</h2>
+    
+<h2 class="section-title">Prossima Partita</h2>
 
 <div class="match">
 
   <div class="match-title">
-    COPPA ITALIA SERIE D · PRIMO TURNO
+    CAMPIONATO SERIE D · GIRONE G · 1ª GIORNATA
   </div>
 
   <div class="match-teams">
@@ -1189,27 +1648,22 @@
 
     <div class="team">
       <img
-        src="PALMESE_SCUDETTO.jpg"
-        alt="Palmese"
+        src="stemmi/unipomezia.webp"
+        alt="UniPomezia"
         class="match-crest"
       >
-      <strong>PALMESE</strong>
+      <strong>UNIPOMEZIA</strong>
     </div>
 
   </div>
 
   <div class="match-info">
-    📅 <strong>30 AGOSTO 2026</strong><br>
-    ⏰ <strong>ORE 20:30</strong><br>
+    📅 <strong>6 SETTEMBRE 2026</strong><br>
     🏟️ STADIO MARCELLO TORRE
   </div>
 
-  <a class="button" href="Paganese-Palmese.html">
-    🔥 VAI ALLA PARTITA
-  </a>
-
-</div>
-
+</div>   
+   
     <!-- SEZIONE MAGLIE -->
     <h2 class="section-title" id="maglie">Le Maglie 2026/27</h2>
 
@@ -3088,7 +3542,540 @@
   </div>
 
 </section>
-```
+
+```html
+<!-- =========================
+     TABELLINI
+========================= -->
+
+<section class="tabellini-section" id="tabellini">
+
+  <h2 class="section-title">📋 TABELLINI</h2>
+
+  <!-- SCHEDA PARTITA -->
+  <div class="tabellino-card" onclick="apriTabellino('paganese-palmese')">
+
+    <div class="tabellino-competizione">
+      COPPA ITALIA SERIE D · PRIMO TURNO
+    </div>
+
+    <div class="tabellino-partita">
+      <div class="tabellino-squadra">
+        <img src="Paganese_Calcio_1926_logo.svg.webp" alt="Paganese">
+        <strong>PAGANESE</strong>
+      </div>
+
+      <div class="tabellino-risultato">
+        <strong>2 - 1</strong>
+      </div>
+
+      <div class="tabellino-squadra">
+        <img src="PALMESE_SCUDETTO.jpg" alt="Palmese">
+        <strong>PALMESE</strong>
+      </div>
+    </div>
+
+    <div class="tabellino-data">
+      30 AGOSTO 2026 · STADIO MARCELLO TORRE
+    </div>
+
+    <div class="tabellino-button">
+      🔎 VEDI TABELLINO
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     FINESTRA TABELLINO
+========================= -->
+
+<div id="paganese-palmese" class="tabellino-modal">
+
+  <div class="tabellino-modal-content">
+
+    <button class="chiudi-tabellino" onclick="chiudiTabellino()">
+      ✕
+    </button>
+
+    <div class="tabellino-modal-header">
+      <div>COPPA ITALIA SERIE D · PRIMO TURNO</div>
+      <h2>PAGANESE 2 - 1 PALMESE</h2>
+      <p>30 AGOSTO 2026 · STADIO MARCELLO TORRE</p>
+    </div>
+
+    <!-- CONTENUTO DEL TABELLINO -->
+    
+<div class="tabellino-contenuto">
+
+  <!-- =========================
+       RIEPILOGO PARTITA
+  ========================= -->
+
+  <div class="tabellino-riepilogo">
+
+    <div class="riepilogo-box">
+      <span>RISULTATO</span>
+      <strong>2 - 1</strong>
+    </div>
+
+    <div class="riepilogo-box">
+      <span>MARCATORI</span>
+      <strong>El Haddadi 42' · Akammadu 45' · Petrosino 81'</strong>
+    </div>
+
+    <div class="riepilogo-box">
+      <span>SPETTATORI</span>
+      <strong>1.780</strong>
+    </div>
+
+    <div class="riepilogo-box">
+      <span>CALCI D'ANGOLO</span>
+      <strong>3 - 5</strong>
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       MARCATORI
+  ========================= -->
+
+  <h3>⚽ MARCATORI</h3>
+
+  <div class="tabellino-marcatori">
+
+    <div class="marcatore-paganese">
+      <span class="minuto-gol">42'</span>
+      <strong>El Haddadi</strong>
+      <span>PAGANESE</span>
+    </div>
+
+    <div class="marcatore-paganese">
+      <span class="minuto-gol">45'</span>
+      <strong>Akammadu</strong>
+      <span>PAGANESE</span>
+    </div>
+
+    <div class="marcatore-palmese">
+      <span class="minuto-gol">81'</span>
+      <strong>Petrosino</strong>
+      <span>PALMESE</span>
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       FORMAZIONI
+  ========================= -->
+
+  <h3>👥 FORMAZIONI</h3>
+
+  <div class="tabellino-formazioni">
+
+    <!-- PAGANESE -->
+    <div class="formazione formazione-paganese">
+
+      <div class="formazione-header">
+        <h4>PAGANESE</h4>
+      </div>
+
+      <div class="formazione-lista">
+
+        <div class="giocatore-voto">
+          <span>Di Salvatore</span>
+          <strong>6.5</strong>
+        </div>
+
+        <div class="giocatore-voto">
+          <span>Piga</span>
+          <strong>7</strong>
+        </div>
+
+        <div class="giocatore-voto">
+          <span>Figueras</span>
+          <strong>6.5</strong>
+        </div>
+
+        <div class="giocatore-voto">
+          <span>De Nova <small>(87' Isufi)</small></span>
+          <strong>6.5</strong>
+        </div>
+
+        <div class="giocatore-voto">
+          <span>Pierce</span>
+          <strong>7</strong>
+        </div>
+
+        <div class="giocatore-voto">
+          <span>Akammadu <small>(77' Bonfiglio)</small></span>
+          <strong>8</strong>
+        </div>
+
+        <div class="giocatore-voto">
+          <span>Di Biagio</span>
+          <strong>6.5</strong>
+        </div>
+
+        <div class="giocatore-voto">
+          <span>Pierdomenico <small>(61' Cordova)</small></span>
+          <strong>6</strong>
+        </div>
+
+        <div class="giocatore-voto">
+          <span>Basanisi <small>(61' Lagzir)</small></span>
+          <strong>8</strong>
+        </div>
+
+        <div class="giocatore-voto">
+          <span>Sicurella</span>
+          <strong>7.5</strong>
+        </div>
+
+        <div class="giocatore-voto">
+          <span>El Haddadi <small>(69' D'Incoronato)</small></span>
+          <strong>7.5</strong>
+        </div>
+
+      </div>
+
+      <div class="formazione-panchina">
+        <strong>Panchina:</strong><br>
+        Bleve · Coquin · Mampuya · Sarrubbi
+      </div>
+
+      <div class="formazione-allenatore">
+        <strong>Allenatore:</strong> Raffaele Novelli
+      </div>
+
+    </div>
+
+
+    <!-- PALMESE -->
+    <div class="formazione formazione-palmese">
+
+      <div class="formazione-header">
+        <h4>PALMESE</h4>
+      </div>
+
+      <div class="formazione-lista">
+
+        <div class="giocatore">
+          Arabesco
+        </div>
+
+        <div class="giocatore">
+          Giuliodori
+        </div>
+
+        <div class="giocatore">
+          Petrosino ⚽ 81'
+        </div>
+
+        <div class="giocatore">
+          Bottalico <small>(54' Fornito)</small>
+        </div>
+
+        <div class="giocatore">
+          Crisci
+        </div>
+
+        <div class="giocatore">
+          Speranza <small>(69' Lucca)</small>
+        </div>
+
+        <div class="giocatore">
+          Sanou <small>(79' De Liguori)</small>
+        </div>
+
+        <div class="giocatore">
+          Iasevoli <small>(54' Asencio)</small>
+        </div>
+
+        <div class="giocatore">
+          Santarpia
+        </div>
+
+        <div class="giocatore">
+          Bolcano
+        </div>
+
+        <div class="giocatore">
+          Puntoriere <small>(69' Fusco)</small>
+        </div>
+
+      </div>
+
+      <div class="formazione-panchina">
+        <strong>Panchina:</strong><br>
+        Boschetti · Zucconi · Molina
+      </div>
+
+      <div class="formazione-allenatore">
+        <strong>Allenatore:</strong> Salvatore D'Alterio
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       SOSTITUZIONI
+  ========================= -->
+
+  <h3>🔄 SOSTITUZIONI</h3>
+
+  <div class="sostituzioni-container">
+
+    <div class="sostituzioni-squadra">
+      <h4>PAGANESE</h4>
+
+      <div class="sostituzione">
+        <span class="sostituzione-minuto">61'</span>
+        <span>Pierdomenico</span>
+        <span class="freccia">↓</span>
+        <strong>Cordova</strong>
+      </div>
+
+      <div class="sostituzione">
+        <span class="sostituzione-minuto">61'</span>
+        <span>Basanisi</span>
+        <span class="freccia">↓</span>
+        <strong>Lagzir</strong>
+      </div>
+
+      <div class="sostituzione">
+        <span class="sostituzione-minuto">69'</span>
+        <span>El Haddadi</span>
+        <span class="freccia">↓</span>
+        <strong>D'Incoronato</strong>
+      </div>
+
+      <div class="sostituzione">
+        <span class="sostituzione-minuto">77'</span>
+        <span>Akammadu</span>
+        <span class="freccia">↓</span>
+        <strong>Bonfiglio</strong>
+      </div>
+
+      <div class="sostituzione">
+        <span class="sostituzione-minuto">87'</span>
+        <span>De Nova</span>
+        <span class="freccia">↓</span>
+        <strong>Isufi</strong>
+      </div>
+    </div>
+
+
+    <div class="sostituzioni-squadra">
+      <h4>PALMESE</h4>
+
+      <div class="sostituzione">
+        <span class="sostituzione-minuto">54'</span>
+        <span>Bottalico</span>
+        <span class="freccia">↓</span>
+        <strong>Fornito</strong>
+      </div>
+
+      <div class="sostituzione">
+        <span class="sostituzione-minuto">54'</span>
+        <span>Iasevoli</span>
+        <span class="freccia">↓</span>
+        <strong>Asencio</strong>
+      </div>
+
+      <div class="sostituzione">
+        <span class="sostituzione-minuto">69'</span>
+        <span>Speranza</span>
+        <span class="freccia">↓</span>
+        <strong>Lucca</strong>
+      </div>
+
+      <div class="sostituzione">
+        <span class="sostituzione-minuto">69'</span>
+        <span>Puntoriere</span>
+        <span class="freccia">↓</span>
+        <strong>Fusco</strong>
+      </div>
+
+      <div class="sostituzione">
+        <span class="sostituzione-minuto">79'</span>
+        <span>Sanou</span>
+        <span class="freccia">↓</span>
+        <strong>De Liguori</strong>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       VOTI PAGANESE
+  ========================= -->
+
+  <h3>⭐ PAGELLE PAGANESE</h3>
+
+  <div class="pagelle-paganese">
+
+    <div class="pagella">
+      <span>Di Salvatore</span>
+      <strong>6.5</strong>
+    </div>
+
+    <div class="pagella">
+      <span>Piga</span>
+      <strong>7</strong>
+    </div>
+
+    <div class="pagella">
+      <span>Figueras</span>
+      <strong>6.5</strong>
+    </div>
+
+    <div class="pagella">
+      <span>De Nova</span>
+      <strong>6.5</strong>
+    </div>
+
+    <div class="pagella">
+      <span>Isufi</span>
+      <strong>N.D.</strong>
+    </div>
+
+    <div class="pagella">
+      <span>Pierce</span>
+      <strong>7</strong>
+    </div>
+
+    <div class="pagella">
+      <span>Akammadu</span>
+      <strong>8</strong>
+    </div>
+
+    <div class="pagella">
+      <span>Bonfiglio</span>
+      <strong>6.5</strong>
+    </div>
+
+    <div class="pagella">
+      <span>Di Biagio</span>
+      <strong>6.5</strong>
+    </div>
+
+    <div class="pagella">
+      <span>Pierdomenico</span>
+      <strong>6</strong>
+    </div>
+
+    <div class="pagella">
+      <span>Cordova</span>
+      <strong>6</strong>
+    </div>
+
+    <div class="pagella">
+      <span>Basanisi</span>
+      <strong>8</strong>
+    </div>
+
+    <div class="pagella">
+      <span>Lagzir</span>
+      <strong>6</strong>
+    </div>
+
+    <div class="pagella">
+      <span>Sicurella</span>
+      <strong>7.5</strong>
+    </div>
+
+    <div class="pagella">
+      <span>El Haddadi</span>
+      <strong>7.5</strong>
+    </div>
+
+    <div class="pagella">
+      <span>D'Incoronato</span>
+      <strong>6</strong>
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       AMMONITI
+  ========================= -->
+
+  <h3>🟨 AMMONITI</h3>
+
+  <div class="tabellino-blocco">
+    <div>Giuliodori — Palmese</div>
+    <div>De Liguori — Palmese</div>
+  </div>
+
+
+  <!-- =========================
+       CALCI D'ANGOLO
+  ========================= -->
+
+  <h3>🚩 CALCI D'ANGOLO</h3>
+
+  <div class="tabellino-blocco">
+    <div><strong>Paganese:</strong> 3</div>
+    <div><strong>Palmese:</strong> 5</div>
+  </div>
+
+
+  <!-- =========================
+       SPETTATORI
+  ========================= -->
+
+  <h3>👥 SPETTATORI</h3>
+
+  <div class="tabellino-blocco">
+    <strong>1.780 paganti</strong><br>
+    250 provenienti da Palma Campania
+  </div>
+
+
+  <!-- =========================
+       ARBITRAGGIO
+  ========================= -->
+
+  <h3>👨‍⚖️ TERNA ARBITRALE</h3>
+
+  <div class="tabellino-blocco">
+    <div><strong>Arbitro:</strong> Natale Rossiello di Molfetta</div>
+    <div><strong>Assistente 1:</strong> Michele Bonavita di Foggia</div>
+    <div><strong>Assistente 2:</strong> Fabio Santo di Barletta</div>
+  </div>
+
+
+  <!-- =========================
+       RECUPERO
+  ========================= -->
+
+  <h3>⏱️ RECUPERO</h3>
+
+  <div class="tabellino-blocco">
+    <div><strong>1° tempo:</strong> 3'</div>
+    <div><strong>2° tempo:</strong> 4'</div>
+  </div>
+
+
+  <!-- =========================
+       STADIO E METEO
+  ========================= -->
+
+  <h3>🏟️ STADIO</h3>
+
+  <div class="tabellino-blocco">
+    <div><strong>Stadio Marcello Torre</strong> — Pagani</div>
+    <div>🌡️ Meteo: circa 30°C</div>
+  </div>
+
+</div>
 
   </main>
 
@@ -3103,6 +4090,42 @@
       © 2026 Malati Della Paganese
     </p>
   </footer>
+```html id="j8j0b4"
+<script>
+function apriTabellino(id) {
+  const modal = document.getElementById(id);
 
+  if (modal) {
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden";
+  }
+}
+
+function chiudiTabellino() {
+  const modal = document.querySelector(".tabellino-modal");
+
+  if (modal) {
+    modal.style.display = "none";
+    document.body.style.overflow = "";
+  }
+}
+
+/* Chiude il tabellino cliccando fuori dalla finestra */
+document.addEventListener("click", function(event) {
+  const modal = document.querySelector(".tabellino-modal");
+
+  if (modal && event.target === modal) {
+    chiudiTabellino();
+  }
+});
+
+/* Chiude il tabellino premendo ESC */
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    chiudiTabellino();
+  }
+});
+</script>
+  
 </body>
 </html>
