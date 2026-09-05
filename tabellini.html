@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tabellini | Malati della Paganese</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #071b3d;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 35px 20px 25px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #d7e5ff;
+      font-size: 16px;
+    }
+
+    .tabellini-container {
+      max-width: 1000px;
+      margin: 20px auto 60px;
+      padding: 0 20px;
+    }
+
+    .tabellino-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .competizione {
+      text-align: center;
+      color: #bcd5ff;
+      font-size: 14px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .data {
+      text-align: center;
+      color: #c9d8ee;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .risultato {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .squadra {
+      font-size: 21px;
+      font-weight: bold;
+      min-width: 150px;
+    }
+
+    .score {
+      font-size: 38px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .marcatori {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.15);
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 15px;
+      line-height: 1.8;
+    }
+
+    .dati {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .dato {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 12px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .dato strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .pulsante {
+      display: block;
+      width: fit-content;
+      margin: 22px auto 0;
+      padding: 12px 22px;
+      background: white;
+      color: #071b3d;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .pulsante:hover {
+      transform: scale(1.04);
+    }
+
+    .torna-home {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .torna-home a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 27px;
+      }
+
+      .risultato {
+        gap: 10px;
+      }
+
+      .squadra {
+        font-size: 17px;
+        min-width: 100px;
+      }
+
+      .score {
+        font-size: 30px;
+      }
+
+      .dati {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>📋 TABELLINI</h1>
+    <p>Tutti i tabellini della stagione della Paganese</p>
+  </header>
+
+  <main class="tabellini-container">
+
+    <!-- PAGANESE - PALMESE -->
+    <div class="tabellino-card">
+
+      <div class="competizione">
+        Coppa Italia Serie D · Primo Turno
+      </div>
+
+      <div class="data">
+        30 agosto 2026 · Stadio Marcello Torre · Pagani
+      </div>
+
+      <div class="risultato">
+        <div class="squadra">Paganese</div>
+
+        <div class="score">
+          2 - 1
+        </div>
+
+        <div class="squadra">Palmese</div>
+      </div>
+
+      <div class="marcatori">
+        ⚽ <strong>El Haddadi</strong> 42'<br>
+        ⚽ <strong>Akammadu</strong> 45'<br>
+        ⚽ <strong>Petrosino</strong> 81'
+      </div>
+
+      <div class="dati">
+        <div class="dato">
+          <strong>Spettatori</strong>
+          1.780
+        </div>
+
+        <div class="dato">
+          <strong>Calci d'angolo</strong>
+          3 - 5
+        </div>
+      </div>
+
+      <a class="pulsante" href="Paganese-Palmese.html">
+        📋 Vedi tabellino completo
+      </a>
+
+    </div>
+
+  </main>
+
+  <div class="torna-home">
+    <a href="index.html">← Torna alla Home</a>
+  </div>
+
+</body>
+</html>
