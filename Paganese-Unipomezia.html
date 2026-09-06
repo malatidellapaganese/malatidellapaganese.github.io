@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Paganese - UniPomezia | Malati della Paganese</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #071b3d;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 35px 20px 25px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #d7e5ff;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto 60px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .competizione {
+      text-align: center;
+      color: #bcd5ff;
+      font-size: 14px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .data {
+      text-align: center;
+      color: #c9d8ee;
+      font-size: 14px;
+      margin-bottom: 25px;
+      line-height: 1.7;
+    }
+
+    .risultato {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .squadra {
+      font-size: 22px;
+      font-weight: bold;
+      min-width: 180px;
+    }
+
+    .score {
+      font-size: 42px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .marcatori {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.15);
+      padding: 18px;
+      border-radius: 12px;
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 23px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .info {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 13px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .info strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .formazioni {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .squadra-formazione {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 18px;
+      border-radius: 12px;
+    }
+
+    .squadra-formazione h3 {
+      text-align: center;
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .modulo {
+      text-align: center;
+      color: #bcd5ff;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .squadra-formazione p {
+      line-height: 1.8;
+      color: #e5efff;
+    }
+
+    .panchina {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      line-height: 1.7;
+      color: #d7e5ff;
+    }
+
+    .pagelle {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .giocatore {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.06);
+      padding: 12px 15px;
+      border-radius: 10px;
+    }
+
+    .voto {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .eventi {
+      line-height: 2;
+      color: #e5efff;
+    }
+
+    .evento-box {
+      background: rgba(255,255,255,0.06);
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .evento-box strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .torna {
+      text-align: center;
+      margin: 30px 0 45px;
+    }
+
+    .torna a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 700px) {
+
+      header h1 {
+        font-size: 27px;
+      }
+
+      .risultato {
+        gap: 10px;
+      }
+
+      .squadra {
+        font-size: 17px;
+        min-width: 100px;
+      }
+
+      .score {
+        font-size: 32px;
+      }
+
+      .formazioni,
+      .pagelle,
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>📋 PAGANESE - UNIPOMEZIA</h1>
+  <p>Tabellino completo della partita</p>
+</header>
+
+<main class="container">
+
+  <!-- RISULTATO -->
+
+  <section class="card">
+
+```
+<div class="competizione">
+  Serie D · Girone G · 1ª Giornata
+</div>
+
+<div class="data">
+  6 settembre 2026 · Ore 15:00<br>
+  Stadio Marcello Torre · Pagani
+</div>
+
+<div class="risultato">
+  <div class="squadra">Paganese</div>
+
+  <div class="score">
+    2 - 1
+  </div>
+
+  <div class="squadra">UniPomezia</div>
+</div>
+
+<div class="marcatori">
+  ⚽ <strong>Pierdomenico</strong> 24' · Paganese<br>
+  ⚽ <strong>Akammadu</strong> 43' · Paganese<br>
+  ⚽ <strong>Osorio</strong> 82' · UniPomezia
+</div>
+
+<div class="info-grid">
+
+  <div class="info">
+    <strong>Spettatori</strong>
+    1.970 · tutti locali
+  </div>
+
+  <div class="info">
+    <strong>Calci d'angolo</strong>
+    5 - 6
+  </div>
+
+  <div class="info">
+    <strong>Arbitro</strong>
+    Bassetti di Lucca
+  </div>
+
+  <div class="info">
+    <strong>Temperatura</strong>
+    40°
+  </div>
+
+  <div class="info">
+    <strong>Recupero 1° tempo</strong>
+    4 minuti
+  </div>
+
+  <div class="info">
+    <strong>Recupero 2° tempo</strong>
+    5 minuti
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- FORMAZIONI -->
+
+  <section class="card">
+
+```
+<h2>👥 Formazioni</h2>
+
+<div class="formazioni">
+
+  <!-- PAGANESE -->
+  <div class="squadra-formazione">
+
+    <h3>🔵 Paganese</h3>
+
+    <div class="modulo">4-3-3</div>
+
+    <p>
+      Di Salvatore 6<br>
+      Di Biagio 6<br>
+      Figueras 7<br>
+      De Nova 6<br>
+      Piga 6<br>
+      Sicurella 6.5<br>
+      Pierce 6<br>
+      Basanisi 6.5
+      (70' Cordova 6)<br>
+      Pierdomenico 7.5
+      (59' D'Incoronato 5)<br>
+      Akammadu 8
+      (72' Lagzir 5.5)<br>
+      El Haddadi 6.5
+      (90' Bonfiglio N.D.)
+    </p>
+
+    <div class="panchina">
+      <strong>Panchina:</strong><br>
+      Bleve · Isufi · Coquin · Giordano · Mampuya
+    </div>
+
+    <div class="panchina">
+      <strong>Allenatore:</strong><br>
+      Novelli
+    </div>
+
+  </div>
+
+
+  <!-- UNIPOMEZIA -->
+  <div class="squadra-formazione">
+
+    <h3>UniPomezia</h3>
+
+    <div class="modulo">3-5-2</div>
+
+    <p>
+      Gariti<br>
+      De Santis
+      (45' Senesi)<br>
+      Gemini<br>
+      Bordi<br>
+      Morelli<br>
+      Buchel
+      (59' Grassetti)<br>
+      Amadio
+      (45' Valle)<br>
+      Conti
+      (15' Tondi)<br>
+      Castelli
+      (45' Sunday)<br>
+      Persichini<br>
+      Osorio
+    </p>
+
+    <div class="panchina">
+      <strong>Panchina:</strong><br>
+      Zandri · Buonpane · Giandomenico · Menniti
+    </div>
+
+    <div class="panchina">
+      <strong>Allenatore:</strong><br>
+      Casciotti
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- PAGELLE -->
+
+  <section class="card">
+
+```
+<h2>⭐ Pagelle Paganese</h2>
+
+<div class="pagelle">
+
+  <div class="giocatore">
+    <span>Di Salvatore</span>
+    <span class="voto">6</span>
+  </div>
+
+  <div class="giocatore">
+    <span>Di Biagio</span>
+    <span class="voto">6</span>
+  </div>
+
+  <div class="giocatore">
+    <span>Figueras</span>
+    <span class="voto">7</span>
+  </div>
+
+  <div class="giocatore">
+    <span>De Nova</span>
+    <span class="voto">6</span>
+  </div>
+
+  <div class="giocatore">
+    <span>Piga</span>
+    <span class="voto">6</span>
+  </div>
+
+  <div class="giocatore">
+    <span>Sicurella</span>
+    <span class="voto">6.5</span>
+  </div>
+
+  <div class="giocatore">
+    <span>Pierce</span>
+    <span class="voto">6</span>
+  </div>
+
+  <div class="giocatore">
+    <span>Basanisi</span>
+    <span class="voto">6.5</span>
+  </div>
+
+  <div class="giocatore">
+    <span>Pierdomenico</span>
+    <span class="voto">7.5</span>
+  </div>
+
+  <div class="giocatore">
+    <span>Akammadu</span>
+    <span class="voto">8</span>
+  </div>
+
+  <div class="giocatore">
+    <span>El Haddadi</span>
+    <span class="voto">6.5</span>
+  </div>
+
+  <div class="giocatore">
+    <span>Cordova</span>
+    <span class="voto">6</span>
+  </div>
+
+  <div class="giocatore">
+    <span>D'Incoronato</span>
+    <span class="voto">5</span>
+  </div>
+
+  <div class="giocatore">
+    <span>Lagzir</span>
+    <span class="voto">5.5</span>
+  </div>
+
+  <div class="giocatore">
+    <span>Bonfiglio</span>
+    <span class="voto">N.D.</span>
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- CARTELLINI -->
+
+  <section class="card">
+
+```
+<h2>🟨🟥 Cartellini</h2>
+
+<div class="eventi">
+
+  <div class="evento-box">
+    <strong>🟨 Ammoniti · Paganese</strong>
+    Pierce · Pierdomenico · Di Biagio
+  </div>
+
+  <div class="evento-box">
+    <strong>🟨 Ammoniti · UniPomezia</strong>
+    De Santis · Morelli · Osorio
+  </div>
+
+  <div class="evento-box">
+    <strong>🟥 Espulsi</strong>
+    Osorio · UniPomezia
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- DATI ARBITRALI -->
+
+  <section class="card">
+
+```
+<h2>📊 Dati della gara</h2>
+
+<div class="info-grid">
+
+  <div class="info">
+    <strong>Arbitro</strong>
+    Bassetti di Lucca
+  </div>
+
+  <div class="info">
+    <strong>Stadio</strong>
+    Marcello Torre · Pagani
+  </div>
+
+  <div class="info">
+    <strong>Data</strong>
+    6 settembre 2026
+  </div>
+
+  <div class="info">
+    <strong>Ora</strong>
+    15:00
+  </div>
+
+  <div class="info">
+    <strong>Temperatura</strong>
+    40°
+  </div>
+
+  <div class="info">
+    <strong>Spettatori</strong>
+    1.970
+  </div>
+
+  <div class="info">
+    <strong>Angoli</strong>
+    5 - 6
+  </div>
+
+  <div class="info">
+    <strong>Recupero</strong>
+    4' pt · 5' st
+  </div>
+
+</div>
+```
+
+  </section>
+
+</main>
+
+<div class="torna">
+  <a href="tabellini.html">← Torna ai Tabellini</a>
+</div>
+
+<div class="torna">
+  <a href="index.html">← Torna alla Home</a>
+</div>
+
+</body>
+</html>
