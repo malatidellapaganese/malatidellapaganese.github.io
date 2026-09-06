@@ -648,10 +648,8 @@
   background: #eaf4ff;
   font-weight: bold;
 }
-    /* =========================
-   
-========================= */
-
+/* ========================= 
+    ========================= */
 .results-section {
   max-width: 900px;
   margin: 60px auto;
@@ -671,11 +669,14 @@
 
 .results-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: column !important;
   gap: 15px;
+  width: 100%;
 }
 
 .result-match {
+  display: block !important;
+  width: 100%;
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(3px);
   border-radius: 15px;
@@ -3589,7 +3590,6 @@
 
 </section>
 
-```html
 <!-- =========================
      TABELLINI
 ========================= -->
@@ -3632,6 +3632,40 @@
   </div>
 
 </section>
+        <!-- SCHEDA PAGANESE - UNIPOMEZIA -->
+  <div class="tabellino-card" onclick="apriTabellino('paganese-unipomezia')">
+
+    <div class="tabellino-competizione">
+      SERIE D · GIRONE G · 1ª GIORNATA
+    </div>
+
+    <div class="tabellino-partita">
+
+      <div class="tabellino-squadra">
+        <img src="stemmi/paganese.webp" alt="Paganese">
+        <strong>PAGANESE</strong>
+      </div>
+
+      <div class="tabellino-risultato">
+        <strong>2 - 1</strong>
+      </div>
+
+      <div class="tabellino-squadra">
+        <img src="stemmi/unipomezia.webp" alt="UniPomezia">
+        <strong>UNIPOMEZIA</strong>
+      </div>
+
+    </div>
+
+    <div class="tabellino-data">
+      6 SETTEMBRE 2026 · ORE 15:00 · STADIO MARCELLO TORRE
+    </div>
+
+    <div class="tabellino-button">
+      🔎 VEDI TABELLINO
+    </div>
+
+  </div>
 
 <!-- =========================
      FINESTRA TABELLINO
@@ -3650,7 +3684,382 @@
       <h2>PAGANESE 2 - 1 PALMESE</h2>
       <p>30 AGOSTO 2026 · STADIO MARCELLO TORRE</p>
     </div>
+<!-- =========================
+     FINESTRA PAGANESE - UNIPOMEZIA
+========================= -->
 
+<div id="paganese-unipomezia" class="tabellino-modal">
+
+  <div class="tabellino-modal-content">
+
+    <button class="chiudi-tabellino" onclick="chiudiTabellino()">
+      ✕
+    </button>
+
+    <div class="tabellino-modal-header">
+      <div>SERIE D · GIRONE G · 1ª GIORNATA</div>
+      <h2>PAGANESE 2 - 1 UNIPOMEZIA</h2>
+      <p>6 SETTEMBRE 2026 · ORE 15:00 · STADIO MARCELLO TORRE</p>
+    </div>
+
+    <div class="tabellino-contenuto">
+
+      <!-- RIEPILOGO -->
+      <div class="tabellino-riepilogo">
+
+        <div class="riepilogo-box">
+          <span>RISULTATO</span>
+          <strong>2 - 1</strong>
+        </div>
+
+        <div class="riepilogo-box">
+          <span>MARCATORI</span>
+          <strong>Pierdomenico 24' · Akammadu 43' · Osorio 82'</strong>
+        </div>
+
+        <div class="riepilogo-box">
+          <span>SPETTATORI</span>
+          <strong>1.970 · tutti locali</strong>
+        </div>
+
+        <div class="riepilogo-box">
+          <span>CALCI D'ANGOLO</span>
+          <strong>5 - 6</strong>
+        </div>
+
+      </div>
+
+
+      <!-- MARCATORI -->
+
+      <h3>⚽ MARCATORI</h3>
+
+      <div class="tabellino-marcatori">
+
+        <div class="marcatore-paganese">
+          <span class="minuto-gol">24'</span>
+          <strong>Pierdomenico</strong>
+          <span>PAGANESE</span>
+        </div>
+
+        <div class="marcatore-paganese">
+          <span class="minuto-gol">43'</span>
+          <strong>Akammadu</strong>
+          <span>PAGANESE</span>
+        </div>
+
+        <div class="marcatore-palmese">
+          <span class="minuto-gol">82'</span>
+          <strong>Osorio</strong>
+          <span>UNIPOMEZIA</span>
+        </div>
+
+      </div>
+
+
+      <!-- FORMAZIONI -->
+
+      <h3>👥 FORMAZIONI</h3>
+
+      <div class="tabellino-formazioni">
+
+        <!-- PAGANESE -->
+
+        <div class="formazione formazione-paganese">
+
+          <div class="formazione-header">
+            <h4>PAGANESE</h4>
+            <small>4-3-3</small>
+          </div>
+
+          <div class="formazione-lista">
+
+            <div class="giocatore-voto">
+              <span>Di Salvatore</span>
+              <strong>6</strong>
+            </div>
+
+            <div class="giocatore-voto">
+              <span>Di Biagio</span>
+              <strong>6</strong>
+            </div>
+
+            <div class="giocatore-voto">
+              <span>Figueras</span>
+              <strong>7</strong>
+            </div>
+
+            <div class="giocatore-voto">
+              <span>De Nova</span>
+              <strong>6</strong>
+            </div>
+
+            <div class="giocatore-voto">
+              <span>Piga</span>
+              <strong>6</strong>
+            </div>
+
+            <div class="giocatore-voto">
+              <span>Sicurella</span>
+              <strong>6.5</strong>
+            </div>
+
+            <div class="giocatore-voto">
+              <span>Pierce</span>
+              <strong>6</strong>
+            </div>
+
+            <div class="giocatore-voto">
+              <span>Basanisi <small>(70' Cordova)</small></span>
+              <strong>6.5</strong>
+            </div>
+
+            <div class="giocatore-voto">
+              <span>Pierdomenico <small>(59' D'Incoronato)</small></span>
+              <strong>7.5</strong>
+            </div>
+
+            <div class="giocatore-voto">
+              <span>Akammadu <small>(72' Lagzir)</small></span>
+              <strong>8</strong>
+            </div>
+
+            <div class="giocatore-voto">
+              <span>El Haddadi <small>(90' Bonfiglio)</small></span>
+              <strong>6.5</strong>
+            </div>
+
+          </div>
+
+          <div class="formazione-panchina">
+            <strong>Panchina:</strong><br>
+            Bleve · Isufi · Coquin · Giordano · Mampuya
+          </div>
+
+          <div class="formazione-allenatore">
+            <strong>Allenatore:</strong> Raffaele Novelli
+          </div>
+
+        </div>
+
+
+        <!-- UNIPOMEZIA -->
+
+        <div class="formazione formazione-palmese">
+
+          <div class="formazione-header">
+            <h4>UNIPOMEZIA</h4>
+            <small>3-5-2</small>
+          </div>
+
+          <div class="formazione-lista">
+
+            <div class="giocatore">Gariti</div>
+
+            <div class="giocatore">
+              De Santis <small>(45' Senesi)</small>
+            </div>
+
+            <div class="giocatore">Gemini</div>
+
+            <div class="giocatore">Bordi</div>
+
+            <div class="giocatore">
+              Morelli
+            </div>
+
+            <div class="giocatore">
+              Buchel <small>(59' Grassetti)</small>
+            </div>
+
+            <div class="giocatore">
+              Amadio <small>(45' Valle)</small>
+            </div>
+
+            <div class="giocatore">
+              Conti <small>(15' Tondi)</small>
+            </div>
+
+            <div class="giocatore">
+              Castelli <small>(45' Sunday)</small>
+            </div>
+
+            <div class="giocatore">
+              Persichini
+            </div>
+
+            <div class="giocatore">
+              Osorio ⚽ 82'
+            </div>
+
+          </div>
+
+          <div class="formazione-panchina">
+            <strong>Panchina:</strong><br>
+            Zandri · Buonpane · Giandomenico · Menniti
+          </div>
+
+          <div class="formazione-allenatore">
+            <strong>Allenatore:</strong> Casciotti
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- SOSTITUZIONI -->
+
+      <h3>🔄 SOSTITUZIONI</h3>
+
+      <div class="sostituzioni-container">
+
+        <div class="sostituzioni-squadra">
+
+          <h4>PAGANESE</h4>
+
+          <div class="sostituzione">
+            <span class="sostituzione-minuto">59'</span>
+            <span>Pierdomenico</span>
+            <span class="freccia">↓</span>
+            <strong>D'Incoronato</strong>
+          </div>
+
+          <div class="sostituzione">
+            <span class="sostituzione-minuto">70'</span>
+            <span>Basanisi</span>
+            <span class="freccia">↓</span>
+            <strong>Cordova</strong>
+          </div>
+
+          <div class="sostituzione">
+            <span class="sostituzione-minuto">72'</span>
+            <span>Akammadu</span>
+            <span class="freccia">↓</span>
+            <strong>Lagzir</strong>
+          </div>
+
+          <div class="sostituzione">
+            <span class="sostituzione-minuto">90'</span>
+            <span>El Haddadi</span>
+            <span class="freccia">↓</span>
+            <strong>Bonfiglio</strong>
+          </div>
+
+        </div>
+
+
+        <div class="sostituzioni-squadra">
+
+          <h4>UNIPOMEZIA</h4>
+
+          <div class="sostituzione">
+            <span class="sostituzione-minuto">15'</span>
+            <span>Conti</span>
+            <span class="freccia">↓</span>
+            <strong>Tondi</strong>
+          </div>
+
+          <div class="sostituzione">
+            <span class="sostituzione-minuto">45'</span>
+            <span>De Santis</span>
+            <span class="freccia">↓</span>
+            <strong>Senesi</strong>
+          </div>
+
+          <div class="sostituzione">
+            <span class="sostituzione-minuto">45'</span>
+            <span>Amadio</span>
+            <span class="freccia">↓</span>
+            <strong>Valle</strong>
+          </div>
+
+          <div class="sostituzione">
+            <span class="sostituzione-minuto">45'</span>
+            <span>Castelli</span>
+            <span class="freccia">↓</span>
+            <strong>Sunday</strong>
+          </div>
+
+          <div class="sostituzione">
+            <span class="sostituzione-minuto">59'</span>
+            <span>Buchel</span>
+            <span class="freccia">↓</span>
+            <strong>Grassetti</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- CARTELLINI -->
+
+      <h3>🟨🟥 CARTELLINI</h3>
+
+      <div class="tabellino-blocco">
+
+        <div>
+          <strong>🟨 Paganese:</strong>
+          Pierce · Pierdomenico · Di Biagio
+        </div>
+
+        <div>
+          <strong>🟨 UniPomezia:</strong>
+          De Santis · Morelli · Osorio
+        </div>
+
+        <div>
+          <strong>🟥 Espulso:</strong>
+          Osorio · UniPomezia
+        </div>
+
+      </div>
+
+
+      <!-- DATI GARA -->
+
+      <h3>📊 DATI DELLA GARA</h3>
+
+      <div class="tabellino-blocco">
+
+        <div>
+          <strong>Arbitro:</strong>
+          Bassetti di Lucca
+        </div>
+
+        <div>
+          <strong>Spettatori:</strong>
+          1.970 · tutti locali
+        </div>
+
+        <div>
+          <strong>Calci d'angolo:</strong>
+          5 - 6
+        </div>
+
+        <div>
+          <strong>Recupero:</strong>
+          4' primo tempo · 5' secondo tempo
+        </div>
+
+        <div>
+          <strong>Temperatura:</strong>
+          40°
+        </div>
+
+        <div>
+          <strong>Stadio:</strong>
+          Marcello Torre · Pagani
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
     <!-- CONTENUTO DEL TABELLINO -->
     
 <div class="tabellino-contenuto">
