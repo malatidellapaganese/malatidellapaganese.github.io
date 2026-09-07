@@ -648,6 +648,120 @@
   background: #eaf4ff;
   font-weight: bold;
 }
+    /* =========================
+   MARCATORI PAGANESE
+========================= */
+
+.scorers-section {
+  margin-top: 40px;
+}
+
+.scorers-section h2 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.scorers-subtitle {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.75;
+  margin-bottom: 20px;
+}
+
+.scorers-card {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.scorer-row {
+  display: grid;
+  grid-template-columns: 55px 1fr 110px 110px 90px;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.scorer-row:last-child {
+  border-bottom: none;
+}
+
+.scorer-position {
+  font-size: 22px;
+  text-align: center;
+}
+
+.scorer-name {
+  font-size: 17px;
+}
+
+.scorer-competition {
+  text-align: center;
+  font-size: 13px;
+}
+
+.scorer-competition span,
+.scorer-total span {
+  display: block;
+  font-size: 11px;
+  opacity: 0.65;
+  margin-bottom: 3px;
+}
+
+.scorer-competition strong {
+  font-size: 16px;
+}
+
+.scorer-total {
+  text-align: center;
+}
+
+.scorer-total strong {
+  font-size: 21px;
+}
+
+.top-scorer {
+  border-left: 4px solid #0072c6;
+}
+
+
+/* =========================
+   MARCATORI - MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .scorer-row {
+    grid-template-columns: 40px 1fr 55px 55px 55px;
+    gap: 5px;
+    padding: 14px 10px;
+  }
+
+  .scorer-name {
+    font-size: 15px;
+  }
+
+  .scorer-competition {
+    font-size: 11px;
+  }
+
+  .scorer-competition strong {
+    font-size: 15px;
+  }
+
+  .scorer-total strong {
+    font-size: 19px;
+  }
+
+  .scorer-position {
+    font-size: 18px;
+  }
+}
 /* ========================= 
     ========================= */
 .results-section {
@@ -3297,6 +3411,101 @@
       </tbody>
 
     </table>
+
+  </div>
+
+</section>
+    <!-- MARCATORI PAGANESE -->
+
+<section class="scorers-section" id="marcatori-paganese">
+
+  <h2>⚽ MARCATORI PAGANESE 2026/27</h2>
+
+  <p class="scorers-subtitle">
+    Tutte le competizioni · Campionato + Coppa Italia
+  </p>
+
+  <div class="scorers-card">
+
+    <!-- 1. AKAMMADU -->
+    <div class="scorer-row top-scorer">
+
+      <div class="scorer-position">🥇</div>
+
+      <div class="scorer-name">
+        <strong>Akammadu</strong>
+      </div>
+
+      <div class="scorer-competition">
+        <span>Campionato</span>
+        <strong>1</strong>
+      </div>
+
+      <div class="scorer-competition">
+        <span>Coppa Italia</span>
+        <strong>1</strong>
+      </div>
+
+      <div class="scorer-total">
+        <span>Totale</span>
+        <strong>2</strong>
+      </div>
+
+    </div>
+
+
+    <!-- 2. EL HADDADI -->
+    <div class="scorer-row">
+
+      <div class="scorer-position">🥈</div>
+
+      <div class="scorer-name">
+        <strong>El Haddadi</strong>
+      </div>
+
+      <div class="scorer-competition">
+        <span>Campionato</span>
+        <strong>0</strong>
+      </div>
+
+      <div class="scorer-competition">
+        <span>Coppa Italia</span>
+        <strong>1</strong>
+      </div>
+
+      <div class="scorer-total">
+        <span>Totale</span>
+        <strong>1</strong>
+      </div>
+
+    </div>
+
+
+    <!-- 3. PIERDOMENICO -->
+    <div class="scorer-row">
+
+      <div class="scorer-position">🥉</div>
+
+      <div class="scorer-name">
+        <strong>Pierdomenico</strong>
+      </div>
+
+      <div class="scorer-competition">
+        <span>Campionato</span>
+        <strong>1</strong>
+      </div>
+
+      <div class="scorer-competition">
+        <span>Coppa Italia</span>
+        <strong>0</strong>
+      </div>
+
+      <div class="scorer-total">
+        <span>Totale</span>
+        <strong>1</strong>
+      </div>
+
+    </div>
 
   </div>
 
