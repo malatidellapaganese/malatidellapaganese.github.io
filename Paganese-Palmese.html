@@ -1,64 +1,13 @@
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Paganese-Palmese | Malati Della Paganese</title>
-  
+  <title>Paganese 2-1 Palmese | Tabellino | Malati Della Paganese</title>
+
   <style>
-    .match-teams {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 35px;
-  margin-top: 20px;
-}
-
-.team {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  min-width: 120px;
-}
-
-.team img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-}
-
-.team-name {
-  font-size: 20px;
-  font-weight: bold;
-  color: #003b70;
-}
-
-.vs {
-  font-size: 26px;
-  font-weight: bold;
-  color: #0072c6;
-}
-
-@media (max-width: 600px) {
-  .match-teams {
-    gap: 15px;
-  }
-
-  .team img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .team-name {
-    font-size: 17px;
-  }
-
-  .vs {
-    font-size: 22px;
-  }
-}
     * {
       box-sizing: border-box;
       margin: 0;
@@ -69,7 +18,7 @@
       font-family: Arial, Helvetica, sans-serif;
       background: #f4f7fb;
       color: #172033;
-      line-height: 1.7;
+      line-height: 1.6;
     }
 
     header {
@@ -111,7 +60,7 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 35px 20px;
     }
@@ -129,6 +78,7 @@
       text-transform: uppercase;
       font-size: 14px;
       margin-bottom: 10px;
+      text-align: center;
     }
 
     h2 {
@@ -136,44 +86,211 @@
       font-size: 36px;
       line-height: 1.2;
       margin-bottom: 12px;
+      text-align: center;
     }
 
     .date {
       color: #777;
       font-size: 14px;
       margin-bottom: 25px;
+      text-align: center;
     }
+
+    /* =========================
+       RISULTATO
+    ========================= */
 
     .match-box {
       background: linear-gradient(135deg, #eaf4fc, #ffffff);
       border: 2px solid #0072c6;
-      border-radius: 15px;
+      border-radius: 18px;
       padding: 25px;
       text-align: center;
-      margin: 25px 0;
+      margin: 25px 0 35px;
     }
 
-    .match-box .competition {
+    .competition {
       color: #0072c6;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
+      font-size: 16px;
     }
 
-    .teams {
-      font-size: 25px;
+    .match-number {
+      color: #003b70;
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .match-teams {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 35px;
+    }
+
+    .team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      min-width: 140px;
+    }
+
+    .team img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+    }
+
+    .team-name {
+      font-size: 20px;
       font-weight: bold;
       color: #003b70;
     }
 
-    .info {
-      margin-top: 12px;
-      color: #555;
+    .score {
+      font-size: 38px;
+      font-weight: bold;
+      color: #0072c6;
+      white-space: nowrap;
     }
 
-    .article p {
-      margin-bottom: 18px;
-      font-size: 17px;
+    .match-info {
+      margin-top: 18px;
+      color: #555;
+      font-size: 15px;
     }
+
+    /* =========================
+       MARCATORI
+    ========================= */
+
+    .scorers {
+      background: #f1f7fc;
+      border-left: 5px solid #0072c6;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 25px 0 30px;
+    }
+
+    .scorers h3 {
+      color: #003b70;
+      margin-bottom: 10px;
+    }
+
+    .scorer {
+      font-size: 17px;
+      margin: 5px 0;
+    }
+
+    /* =========================
+       DATI PARTITA
+    ========================= */
+
+    .section-title {
+      color: #003b70;
+      font-size: 25px;
+      margin: 35px 0 15px;
+      border-bottom: 2px solid #0072c6;
+      padding-bottom: 7px;
+    }
+
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .data-box {
+      background: #f1f7fc;
+      border-radius: 12px;
+      padding: 15px 10px;
+      text-align: center;
+    }
+
+    .data-box strong {
+      display: block;
+      color: #003b70;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .data-box span {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    /* =========================
+       FORMAZIONI
+    ========================= */
+
+    .formations {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .formation-box {
+      background: #f8fafc;
+      border: 1px solid #dce6ef;
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    .formation-box h3 {
+      color: #003b70;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .formation-box p {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .formation-box strong {
+      color: #0072c6;
+    }
+
+    /* =========================
+       PAGELLE
+    ========================= */
+
+    .ratings {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    .ratings th {
+      background: #003b70;
+      color: white;
+      padding: 11px 8px;
+      font-size: 14px;
+    }
+
+    .ratings td {
+      padding: 10px 8px;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    .ratings td:last-child {
+      text-align: center;
+      font-weight: bold;
+      color: #003b70;
+    }
+
+    .ratings tr:nth-child(even) {
+      background: #f5f9fd;
+    }
+
+    /* =========================
+       NOTE
+    ========================= */
 
     .highlight {
       border-left: 5px solid #0072c6;
@@ -181,17 +298,26 @@
       background: #f1f7fc;
       margin: 25px 0;
       font-weight: bold;
+      border-radius: 8px;
     }
+
+    /* =========================
+       PULSANTE
+    ========================= */
 
     .back {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 18px;
+      margin-top: 30px;
+      padding: 11px 20px;
       background: #0072c6;
       color: white;
       text-decoration: none;
       border-radius: 25px;
       font-weight: bold;
+    }
+
+    .back:hover {
+      background: #003b70;
     }
 
     footer {
@@ -202,7 +328,12 @@
       margin-top: 30px;
     }
 
-    @media (max-width: 600px) {
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
       h2 {
         font-size: 28px;
       }
@@ -211,37 +342,55 @@
         padding: 22px;
       }
 
-      .teams {
-        font-size: 20px;
+      .match-teams {
+        gap: 10px;
       }
 
-      nav {
-        justify-content: flex-start;
+      .team {
+        min-width: 90px;
+      }
+
+      .team img {
+        width: 70px;
+        height: 70px;
+      }
+
+      .team-name {
+        font-size: 16px;
+      }
+
+      .score {
+        font-size: 28px;
+      }
+
+      .data-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .formations {
+        grid-template-columns: 1fr;
+      }
+
+      .ratings {
+        min-width: 500px;
+      }
+
+      .ratings-container {
         overflow-x: auto;
       }
-
-      nav a {
-        white-space: nowrap;
-      }
     }
-    .news-image {
-  width: 100%;
-  max-height: 450px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin: 20px 0 25px;
-  display: block;
-}
   </style>
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCE0EHCC5R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-VCE0EHCC5R');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCE0EHCC5R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VCE0EHCC5R');
+  </script>
+
 </head>
 
 <body>
@@ -253,101 +402,303 @@
 
   <nav>
     <a href="index.html">🏠 Home</a>
-    <a href="news.html">📰 News</a>
-    <a href="partite.html">⚽ Partite</a>
-    <a href="calciomercato.html">🔥 Calciomercato</a>
+    <a href="tabellini.html">📋 Tabellini</a>
     <a href="rosa.html">👥 Rosa</a>
-    <a href="contatti.html">📩 Contatti</a>
   </nav>
 
   <main class="container">
 
     <article class="article">
 
-      <div class="category">🔥 Coppa Italia Serie D</div>
+      <div class="category">
+        🔥 Coppa Italia Serie D · Primo Turno
+      </div>
 
-      <h2>Paganese-Palmese: è subito derby in Coppa Italia</h2>
+      <h2>Paganese 2-1 Palmese</h2>
 
       <div class="date">
-        30 agosto 2026 · Stadio Marcello Torre · Pagani
+        30 agosto 2026 · Ore 20:30 · Stadio Marcello Torre · Pagani
       </div>
-      <img 
-  src="Paganese-Palmese.jpeg" 
-  alt="Paganese-Palmese"
-  class="news-image"
-  >
+
+
+      <!-- RISULTATO -->
 
       <div class="match-box">
 
-       <div class="competition">
-  PRIMO TURNO · COPPA ITALIA SERIE D
-</div>
-      <div class="match-number">
-  GARA 51
-</div>
-       <div class="match-teams">
-  <div class="team">
-    <img src="Paganese_Calcio_1926_logo.svg.webp" alt="Stemma Paganese">
-    <div class="team-name">Paganese</div>
-  </div>
+        <div class="competition">
+          PRIMO TURNO · COPPA ITALIA SERIE D
+        </div>
 
-  <div class="vs">VS</div>
+        <div class="match-number">
+          GARA 51 · RISULTATO FINALE
+        </div>
 
-  <div class="team">
-    <img src="PALMESE_SCUDETTO.jpg" alt="Stemma Palmese">
-    <div class="team-name">Palmese</div>
-  </div>
-</div>
+        <div class="match-teams">
 
-        <div class="info">
-          📅 30 agosto 2026<br>
-          ⏰ Ore 20:30<br>
-          🏟️ Stadio Marcello Torre
+          <div class="team">
+            <img src="Paganese_Calcio_1926_logo.svg.webp" alt="Stemma Paganese">
+            <div class="team-name">Paganese</div>
+          </div>
+
+          <div class="score">
+            2 - 1
+          </div>
+
+          <div class="team">
+            <img src="PALMESE_SCUDETTO.jpg" alt="Stemma Palmese">
+            <div class="team-name">Palmese</div>
+          </div>
+
+        </div>
+
+        <div class="match-info">
+          🏟️ Stadio Marcello Torre · Pagani
         </div>
 
       </div>
 
-      <p>
-        Sarà subito una sfida dal sapore speciale per la Paganese.
-        Gli Azzurrostellati affronteranno la Palmese nel primo turno
-        di Coppa Italia Serie D.
-      </p>
 
-      <p>
-        Il match si giocherà al <strong>Marcello Torre di Pagani</strong>,
-        davanti al popolo azzurrostellato, pronto a sostenere la squadra
-        nel primo appuntamento ufficiale della nuova stagione.
-      </p>
+      <!-- MARCATORI -->
 
-      <div class="highlight">
-        💙⭐ Si parte. Una nuova stagione, nuove emozioni e la stessa
-        immensa passione per la Paganese.
+      <div class="scorers">
+
+        <h3>⚽ Marcatori</h3>
+
+        <div class="scorer">
+          <strong>Paganese:</strong> El Haddadi 42' · Akammadu 45'
+        </div>
+
+        <div class="scorer">
+          <strong>Palmese:</strong> Petrosino 81'
+        </div>
+
       </div>
 
-      <p>
-        Per gli Azzurrostellati sarà anche l'occasione per iniziare
-        nel migliore dei modi una stagione particolarmente importante,
-        quella del Centenario.
-      </p>
 
-      <p>
-        Appuntamento dunque al Marcello Torre. La Paganese è pronta
-        a scendere in campo.
-      </p>
+      <!-- DATI PARTITA -->
 
-      <div class="highlight">
-        FORZA PAGANESE! 💙⭐
+      <h3 class="section-title">
+        📊 Dati della partita
+      </h3>
+
+      <div class="data-grid">
+
+        <div class="data-box">
+          <strong>SPETTATORI</strong>
+          <span>1.780</span>
+        </div>
+
+        <div class="data-box">
+          <strong>CALCI D'ANGOLO</strong>
+          <span>3 - 5</span>
+        </div>
+
+        <div class="data-box">
+          <strong>COMPETIZIONE</strong>
+          <span>Coppa Italia</span>
+        </div>
+
+        <div class="data-box">
+          <strong>GARA</strong>
+          <span>51</span>
+        </div>
+
       </div>
 
-      <a class="back" href="news.html">
-        ← Torna alle News
+
+      <!-- FORMAZIONI -->
+
+      <h3 class="section-title">
+        👥 Formazioni
+      </h3>
+
+      <div class="formations">
+
+        <div class="formation-box">
+
+          <h3>💙⭐ Paganese</h3>
+
+          <p><strong>Modulo:</strong> 4-3-3</p>
+
+          <p>
+            <strong>Titolari:</strong><br>
+            Di Salvatore<br>
+            Piga<br>
+            Figueras<br>
+            De Nova<br>
+            Pierce<br>
+            Akammadu<br>
+            Di Biagio<br>
+            Pierdomenico<br>
+            Basanisi<br>
+            Sicurella<br>
+            El Haddadi
+          </p>
+
+          <p>
+            <strong>Sostituzioni:</strong><br>
+            61' Cordova per Pierdomenico<br>
+            61' Lagzir per Basanisi<br>
+            69' D'Incoronato per El Haddadi<br>
+            77' Bonfiglio per Akammadu<br>
+            87' Isufi per De Nova
+          </p>
+
+          <p>
+            <strong>Allenatore:</strong> Raffaele Novelli
+          </p>
+
+        </div>
+
+
+        <div class="formation-box">
+
+          <h3>🟢 Palmese</h3>
+
+          <p>
+            <strong>Formazione:</strong><br>
+            Petrosino e compagni
+          </p>
+
+          <p>
+            <strong>Marcatori:</strong><br>
+            Petrosino 81'
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PAGELLE -->
+
+      <h3 class="section-title">
+        ⭐ Pagelle Paganese
+      </h3>
+
+      <div class="ratings-container">
+
+        <table class="ratings">
+
+          <thead>
+            <tr>
+              <th>Giocatore</th>
+              <th>Voto</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>Di Salvatore</td>
+              <td>6.5</td>
+            </tr>
+
+            <tr>
+              <td>Piga</td>
+              <td>7</td>
+            </tr>
+
+            <tr>
+              <td>Figueras</td>
+              <td>6.5</td>
+            </tr>
+
+            <tr>
+              <td>De Nova</td>
+              <td>6.5</td>
+            </tr>
+
+            <tr>
+              <td>Isufi</td>
+              <td>N.D.</td>
+            </tr>
+
+            <tr>
+              <td>Pierce</td>
+              <td>7</td>
+            </tr>
+
+            <tr>
+              <td>Akammadu</td>
+              <td>8</td>
+            </tr>
+
+            <tr>
+              <td>Bonfiglio</td>
+              <td>6.5</td>
+            </tr>
+
+            <tr>
+              <td>Di Biagio</td>
+              <td>6.5</td>
+            </tr>
+
+            <tr>
+              <td>Pierdomenico</td>
+              <td>6</td>
+            </tr>
+
+            <tr>
+              <td>Cordova</td>
+              <td>6</td>
+            </tr>
+
+            <tr>
+              <td>Basanisi</td>
+              <td>8</td>
+            </tr>
+
+            <tr>
+              <td>Lagzir</td>
+              <td>6</td>
+            </tr>
+
+            <tr>
+              <td>Sicurella</td>
+              <td>7.5</td>
+            </tr>
+
+            <tr>
+              <td>El Haddadi</td>
+              <td>7.5</td>
+            </tr>
+
+            <tr>
+              <td>D'Incoronato</td>
+              <td>6</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+
+      <!-- SINTESI -->
+
+      <div class="highlight">
+        💙⭐ La Paganese supera la Palmese per 2-1 al Marcello Torre
+        e conquista il passaggio del turno in Coppa Italia Serie D.
+      </div>
+
+      <div class="highlight">
+        🔥 El Haddadi e Akammadu firmano le due reti azzurrostellate.
+      </div>
+
+
+      <a class="back" href="tabellini.html">
+        ← Torna ai Tabellini
       </a>
 
     </article>
 
   </main>
 
+
   <footer>
+
     <strong>💙⭐ Malati Della Paganese</strong>
 
     <p>La voce degli Azzurrostellati</p>
@@ -355,7 +706,9 @@
     <p style="margin-top: 12px; font-size: 13px; opacity: 0.8;">
       © 2026 Malati Della Paganese
     </p>
+
   </footer>
 
 </body>
 </html>
+```
