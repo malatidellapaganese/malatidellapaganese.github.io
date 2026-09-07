@@ -4632,16 +4632,48 @@
       © 2026 Malati Della Paganese
     </p>
   </footer>
-```html id="j8j0b4"
+
+<script>
 <script>
 function apriTabellino(id) {
-  const modal = document.getElementById(id);
+
+  if (id === "paganese-palmese") {
+    window.location.href = "Paganese-Palmese.html";
+    return;
+  }
+
+  if (id === "paganese-unipomezia") {
+    window.location.href = "Paganese-Unipomezia.html";
+    return;
+  }
+
+}
+
+function chiudiTabellino() {
+  const modal = document.querySelector(".tabellino-modal");
 
   if (modal) {
-    modal.style.display = "block";
-    document.body.style.overflow = "hidden";
+    modal.style.display = "none";
+    document.body.style.overflow = "";
   }
 }
+
+/* Chiude il tabellino cliccando fuori dalla finestra */
+document.addEventListener("click", function(event) {
+  const modal = document.querySelector(".tabellino-modal");
+
+  if (modal && event.target === modal) {
+    chiudiTabellino();
+  }
+});
+
+/* Chiude il tabellino premendo ESC */
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    chiudiTabellino();
+  }
+});
+</script>
 
 function chiudiTabellino() {
   const modal = document.querySelector(".tabellino-modal");
