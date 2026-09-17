@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Latte Dolce 2-3 Paganese | Tabellino | Malati Della Paganese</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #071b3d;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 35px 20px 25px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #d7e5ff;
+      font-size: 16px;
+    }
+
+    .tabellino-container {
+      max-width: 1000px;
+      margin: 20px auto 60px;
+      padding: 0 20px;
+    }
+
+    .tabellino-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .competizione {
+      text-align: center;
+      color: #bcd5ff;
+      font-size: 14px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .data {
+      text-align: center;
+      color: #c9d8ee;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .risultato {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .squadra {
+      font-size: 21px;
+      font-weight: bold;
+      min-width: 170px;
+    }
+
+    .score {
+      font-size: 40px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .marcatori {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.15);
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 15px;
+      line-height: 1.8;
+    }
+
+    .dati {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .dato {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 12px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .dato strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .formazioni {
+      margin-top: 25px;
+    }
+
+    .formazioni h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+
+    .formazione {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 15px;
+    }
+
+    .formazione h3 {
+      text-align: center;
+      margin-bottom: 12px;
+      color: #d7e5ff;
+    }
+
+    .formazione p {
+      line-height: 1.7;
+      color: #f2f5ff;
+    }
+
+    .torna-home {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .torna-home a {
+      display: inline-block;
+      color: #071b3d;
+      background: white;
+      padding: 12px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+
+      header h1 {
+        font-size: 27px;
+      }
+
+      .risultato {
+        gap: 10px;
+      }
+
+      .squadra {
+        font-size: 17px;
+        min-width: 100px;
+      }
+
+      .score {
+        font-size: 30px;
+      }
+
+      .dati {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>📋 LATTE DOLCE 2-3 PAGANESE</h1>
+    <p>Seconda giornata · Serie D Girone G · Stagione 2026/27</p>
+  </header>
+
+  <main class="tabellino-container">
+
+    <div class="tabellino-card">
+
+      <div class="competizione">
+        Serie D · Girone G · 2ª Giornata
+      </div>
+
+      <div class="data">
+        12 settembre 2026 · Ore 15:00 · Stadio Vanni Sanna · Sassari
+      </div>
+
+      <div class="risultato">
+        <div class="squadra">Latte Dolce</div>
+
+        <div class="score">
+          2 - 3
+        </div>
+
+        <div class="squadra">Paganese</div>
+      </div>
+
+      <div class="marcatori">
+        ⚽ <strong>Pinna</strong> 13' · Latte Dolce<br>
+        ⚽ <strong>Basanisi</strong> 23' · Paganese<br>
+        ⚽ <strong>Pierce</strong> 36' · Paganese<br>
+        ⚽ <strong>Sorgente</strong> 42' rig. · Latte Dolce<br>
+        ⚽ <strong>Sicurella</strong> 79' · Paganese
+      </div>
+
+      <div class="dati">
+
+        <div class="dato">
+          <strong>Calci d'angolo</strong>
+          5 - 3
+        </div>
+
+        <div class="dato">
+          <strong>Arbitro</strong>
+          Luca Budriesi di Bologna
+        </div>
+
+        <div class="dato">
+          <strong>Recupero 1º tempo</strong>
+          2'
+        </div>
+
+        <div class="dato">
+          <strong>Recupero 2º tempo</strong>
+          5'
+        </div>
+
+      </div>
+
+      <div class="formazioni">
+
+        <h2>⚽ FORMAZIONI</h2>
+
+        <div class="formazione">
+
+          <h3>Latte Dolce · 3-4-2-1</h3>
+
+          <p>
+            Cherchi; Pinna, Coghetto, Frau; Banti (63' Dumani),
+            Piredda (83' Mascia), Lopes, Limberti;
+            Di Paolo (69' Asproni), Pulina (69' Di Gianni);
+            Sorgente (61' Saddi).
+          </p>
+
+          <p>
+            <strong>A disposizione:</strong>
+            Pedone, Dieni, Ruggiu, Agrelli.
+          </p>
+
+          <p>
+            <strong>Allenatore:</strong> Fini
+          </p>
+
+        </div>
+
+        <div class="formazione">
+
+          <h3>Paganese · 4-3-3</h3>
+
+          <p>
+            Di Salvatore; Di Biagio (83' Sarrubbi),
+            Isufi, De Nova, Piga; Sicurella, Pierce,
+            Basanisi (69' Cordova); Pierdomenico (53' Lagzir),
+            Akammadu, El Haddadi (64' Bonfiglio).
+          </p>
+
+          <p>
+            <strong>A disposizione:</strong>
+            Bleve, Coquin, Giordano, Mampuya, D’Incoronato.
+          </p>
+
+          <p>
+            <strong>Allenatore:</strong> Novelli
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="formazione">
+
+        <h2>🟨 AMMONITI</h2>
+
+        <p style="text-align:center; line-height:1.8;">
+          Sorgente (Latte Dolce) ·
+          Piredda (Latte Dolce) ·
+          Lagzir (Paganese) ·
+          Sarrubbi (Paganese)
+        </p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <div class="torna-home">
+    <a href="index.html">← Torna alla Home</a>
+  </div>
+
+</body>
+</html>
